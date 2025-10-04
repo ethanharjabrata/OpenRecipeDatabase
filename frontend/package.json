@@ -1,7 +1,7 @@
 {
-  "name": "recipe-app",
+  "name": "recipe-db-frontend",
   "version": "1.0.0",
-  "description": "idk man",
+  "description": "Fronend for Recipe App",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

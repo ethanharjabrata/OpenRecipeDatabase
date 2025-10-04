@@ -1,0 +1,21 @@
+{
+  "name": "recipe-db-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Recipe App with PostgreSQL",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": ["recipe", "api", "express", "postgresql"],
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
