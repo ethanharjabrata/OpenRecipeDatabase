@@ -9,4 +9,4 @@ Although there already exist Open Source Recipe Database software, I plan on cre
 - Database: PostGreSQL
 
 ## ERD
-![image](images/ER_diagram.png)
+![image](images/ERD.png)
