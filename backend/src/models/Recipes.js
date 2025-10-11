@@ -1,59 +1,61 @@
-// 2. Define the model/schema
-module.exports = (sequelize, DataTypes) => {
-  const Recipe = sequelize.define('Recipe', {
-    recipe_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    cuisine_type: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    meal_type: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    is_vegetarian: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
-    is_vegan: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
-    is_gluten_free: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    }
-  }, {
-    tableName: 'Recipes',
-    timestamps: true,
-    underscored: true
-  });
+// not even sure I need this stuff
+// module.exports = (sequelize, DataTypes) => {
+//   const Recipe = sequelize.define('Recipe', {
+//     recipe_id: {
+//       type: DataTypes.INTEGER,
+//       primaryKey: true,
+//       autoIncrement: true
+//     },
+//     name: {
+//         type: DataTypes.STRING,
+//         allowNull: false
+//     },
+//     cuisine_type: {
+//         //I can't imagine a single dish could have influences from more than 4 cuisines
+//       type: DataTypes.STRING(100),
+//       allowNull: false
+//     },
+//     meal_type: {
+//         //is either Breakfast, Lunch or Dinner
+//       type: DataTypes.STRING(10),
+//       allowNull: false
+//     },
+//     is_vegetarian: {
+//       type: DataTypes.BOOLEAN,
+//       defaultValue: false
+//     },
+//     is_vegan: {
+//       type: DataTypes.BOOLEAN,
+//       defaultValue: false
+//     },
+//     is_gluten_free: {
+//       type: DataTypes.BOOLEAN,
+//       defaultValue: false
+//     }
+//   }, {
+//     tableName: 'Recipes',
+//     timestamps: true,
+//     underscored: true
+//   });
 
-  Recipe.associate = (models) => {
-    Recipe.hasMany(models.Ingredient, {
-      foreignKey: 'recipe_id',
-      as: 'Ingredients'
-    });
+//   Recipe.associate = (models) => {
+//     Recipe.hasMany(models.Ingredient, {
+//       foreignKey: 'recipe_id',
+//       as: 'Ingredients'
+//     });
     
-    Recipe.hasMany(models.Step, {
-      foreignKey: 'recipe_id',
-      as: 'Steps'
-    });
+//     Recipe.hasMany(models.Step, {
+//       foreignKey: 'recipe_id',
+//       as: 'Steps'
+//     });
     
-    Recipe.hasMany(models.Review, {
-      foreignKey: 'recipe_id',
-      as: 'Reviews'
-    });
-  };
+//     Recipe.hasMany(models.Review, {
+//       foreignKey: 'recipe_id',
+//       as: 'Reviews'
+//     });
+//   };
 
-  return Recipe;
-};
+//   return Recipe;
+// };
 
 
