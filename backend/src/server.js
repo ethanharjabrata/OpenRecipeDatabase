@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const dotenv = require('dotenv');
 dotenv.config();
 const recipeRoutes = require('./routes/recipes');
-const userRoutes = require('./routes/recipes')
+const userRoutes = require('./routes/users')
 const app = express();
 app.use(express.json());
 
@@ -12,7 +12,7 @@ app.use(express.json());
 // currently, local db only. remind me to figure out how to switch to 
 const Pool = new Pool({
     user: process.env.DB_USER,
-    password: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
@@ -23,7 +23,7 @@ pool.on('error', (err, client) => {
   process.exit(-1)
 });
 
-app.use('/recipes', recipeRoutes(pool));
+// app.use('/recipes', recipeRoutes(pool));
 app.use('/users', userRoutes(pool))
 
 process.on("SIGTERM", async ()=>{
