@@ -12,3 +12,6 @@ Although there already exist Open Source Recipe Database software, I plan on cre
 
 ## ERD
 ![image](images/ERD.png)
+
+## Licence
+Currently GNU GPL v3, may be subject to change to any later version as published by the Free Software Foundation (SPDX license identifier GPL-3.0-or-later) 
