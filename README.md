@@ -9,7 +9,4 @@ Although there already exist Open Source Recipe Database software, I plan on cre
 - Database: PostGreSQL
 
 ## ERD
-![image](images/ER_diagram.png)
-
-## License
-Probably just going to be GPL version 3 or any later version as published by the Free Software Foundation (SPDX license identifier GPL-3.0-or-later)
+![image](images/ERD.png)
